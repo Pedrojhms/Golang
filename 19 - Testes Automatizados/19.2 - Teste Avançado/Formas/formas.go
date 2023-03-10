@@ -1,12 +1,11 @@
 package formas
 
 import (
-	"fmt"
 	"math"
 )
 
 type Forma interface {
-	area() float64
+	Area() float64
 }
 
 type Retangulo struct {
@@ -15,7 +14,7 @@ type Retangulo struct {
 }
 
 type Circulo struct {
-	raio float64
+	Raio float64
 }
 
 func (r Retangulo) Area() float64 {
@@ -23,13 +22,5 @@ func (r Retangulo) Area() float64 {
 }
 
 func (c Circulo) Area() float64 {
-	return math.Pi * math.Pow(c.raio, 2)
-}
-
-func main() {
-	r := Retangulo{10, 15}
-
-	c := Circulo{10}
-
-	fmt.Println(r, c)
+	return math.Pi * math.Pow(c.Raio, 2)
 }
